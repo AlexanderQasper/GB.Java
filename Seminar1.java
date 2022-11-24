@@ -1,7 +1,7 @@
 // 1. Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
 import java.util.Scanner;
 
-public class HW1 {
+public class Seminar1 {
     public static void Task1(String[] args) {
         int n = 0;
         boolean flag = false;
