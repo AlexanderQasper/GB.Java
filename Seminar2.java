@@ -1,18 +1,29 @@
-import java.util.Scanner;
-
 public class Seminar2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        str = str.replaceAll("\\W", "");
-        StringBuilder strbuild = new StringBuilder(str);
-        strbuild.reverse();
-        String invstr = strbuild.toString();
-        if (str.equalsIgnoreCase(invstr))
-            System.out.println(invstr);
+    public static boolean isPalindrome(String str)
+    {
+        if (str == null) {
+            return false;
+        }
+ 
+        for (int i = 0, j = str.length() - 1; i < j; i++, j--)
+        {
+            if (str.charAt(i) != str.charAt(j)) {
+                return false;
+            }
+        }
+ 
+        return true;
+    }
+ 
+    public static void main (String[] args)
+    {
+        String str = "abbab";
+ 
+        if (isPalindrome(str)) {
+            System.out.println("Palindrome");
+        }
         else {
-            System.out.println("Строки не полиндромны");
+            System.out.println("Not Palindrome");
         }
     }
-
 }
